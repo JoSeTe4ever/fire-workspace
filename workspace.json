@@ -189,6 +189,33 @@
           }
         }
       }
+    },
+    "flame": {
+      "root": "libs/flame",
+      "sourceRoot": "libs/flame/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/flame/.eslintrc",
+            "tsConfig": [
+              "libs/flame/tsconfig.lib.json",
+              "libs/flame/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/flame/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/flame/jest.config.js",
+            "tsConfig": "libs/flame/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {

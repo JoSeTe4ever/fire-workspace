@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@fire-workspace/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@fire-workspace/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@fire-workspace/flame": ["libs/flame/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
